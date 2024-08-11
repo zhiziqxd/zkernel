@@ -1,10 +1,12 @@
 #ifndef random_H
 #define random_H
-void srand(int n){
-    rand_start=n;
+const int RAND_MAX=
+long long int rand_start;
+void srand(long long int st){
+    rand_start=st;
 }
-int rand_start;
 int rand(){
-    return (n*50-2+5-7*3/2+1*5)%100000;
+    rand_start--;
+    return rand_start*2-4+1-4/3%1045+3435-56%32767;
 }
 #endif
