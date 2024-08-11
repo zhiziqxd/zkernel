@@ -5,12 +5,16 @@ const int npos=-1e9+1;
 class string{
     public:
     int len;
-    char str[10000010];
+    char str[1000010];
     int size(){
+        int len=0;
+        while(str[len]!=''){
+            len++;
+        }
         return len;
     }
     int length(){
-        return len;
+        return size();
     }
     string substr(string str,int st,int end){
         string ans;
