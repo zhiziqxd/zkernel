@@ -34,7 +34,25 @@ struct cout{
         printf("\n");
     }
 }
-cout operator <<(cout a,const char* str){
+void operator <<(cout a,const char* str){
     printf(str);
+}
+//out
+void scanf(char &in){
+    unsigned char status;
+    unsigned char data;
+    status=inb(0x64);
+    while(status&0x01==false){
+        status=inb(0x64);
+    }
+    data=inb(0x60);
+    in=data;
+    return;
+}
+struct cin{
+    //暂时未添加
+}
+void operator >>(cout a,char in){
+    scanf(in);
 }
 #endif
