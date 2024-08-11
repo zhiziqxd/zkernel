@@ -10,8 +10,10 @@ void system(const char *command){
     }
 }
 void sleep(int time_long){
-    for(int i=1;i<=124911402;i++){
-        //empty
+    while(time_long--){
+        for(int i=1;i<=124911402;i++){
+            //empty
+        }
     }
     return;
 }
