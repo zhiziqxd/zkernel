@@ -33,7 +33,7 @@ struct cout{
     void flush(){
         printf("\n");
     }
-}
+};
 void operator <<(cout a,const char* str){
     printf(str);
 }
@@ -51,7 +51,7 @@ void scanf(char &in){
 }
 struct cin{
     //暂时未添加
-}
+};
 void operator >>(cout a,char in){
     scanf(in);
 }
