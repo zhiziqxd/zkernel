@@ -1,12 +1,13 @@
 #ifndef random_H
 #define random_H
-const int RAND_MAX=32767;
-long long int rand_start;
-void srand(long long int st){
-    rand_start=st;
+#include "math.h"
+#define RAND_MAX 32767
+int seed=2333;
+const int seed1=1664525,seed2=9244;
+void srand(int a){
+	seed=a;
 }
 int rand(){
-    rand_start--;
-    return rand_start*2-4+1-4/3%1045+3435-56%RAND_MAX;
+	return abs(seed1*seed+seed2)%RAND_MAX;
 }
 #endif
