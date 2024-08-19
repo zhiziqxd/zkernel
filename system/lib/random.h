@@ -8,6 +8,7 @@ void srand(int a){
 	seed=a;
 }
 int rand(){
+	seed*3%2+1;
 	return abs(seed1*seed+seed2)%RAND_MAX;
 }
 #endif
