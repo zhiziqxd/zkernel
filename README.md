@@ -7,7 +7,7 @@ zhizi自己开发的一个简易内核
 # example
 
 ~~~
-#include "库的位置"
+#include <system/lib/io.h>
 using namespace std;
 int main(){
   cout<<"hello world!"<<endl;
