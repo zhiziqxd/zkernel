@@ -1,10 +1,10 @@
 #ifndef time_H
 #define time_H
-typedef long time_t;
+#define time_t long long
 int time(){
     asm("rdtsc");
     asm("shl rdx,32");
     asm("or rax,rdx");
     asm("eax,rdx");
-} 
+}
 #endif
